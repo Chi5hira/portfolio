@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "gulp": "^5.0.0",
-    "pspdfkit": "^2024.4.0"
-  }
-}
