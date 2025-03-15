@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cinta & Malam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #ff8e8e;
+            opacity: 0.8;
+            margin-bottom: 3rem;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            color: #ff8e8e;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
+            }
+            to {
+                text-shadow: 0 0 20px #ff8e8e, 0 0 30px #ff8e8e, 0 0 40px #ff8e8e;
+            }
+        }
+
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts"></div>
+    <div class="container">
+        <header>
+            <h1>Dashboard Cinta & Malam</h1>
+            <p class="subtitle">Temukan perjalanan cinta di malam hari ✨</p>
+        </header>
+
+        <main class="cards-container">
+            <div class="card" onclick="window.open('https://github.com/Chi5hira/portfolio/tree/main/bucin/AciittAcaaHiji', '_blank')">
+                <i class="fas fa-heart icon"></i>
+                <h2>AciittAcaaHiji</h2>
+                <p>Jelajahi kisah cinta pertama dalam repository ini. Temukan keindahan dalam setiap baris kode.</p>
+                <a href="https://github.com/Chi5hira/portfolio/tree/main/bucin/AciittAcaaHiji" class="btn" target="_blank">Explore ❤️</a>
+            </div>
+
+            <div class="card" onclick="window.open('https://github.com/Chi5hira/portfolio/tree/main/bucin/AciittAcaaDua', '_blank')">
+                <i class="fas fa-moon icon"></i>
+                <h2>AciittAcaaDua</h2>
+                <p>Lanjutkan perjalanan cinta ke chapter kedua. Rasakan keajaiban malam dalam setiap commit.</p>
+                <a href="https://github.com/Chi5hira/portfolio/tree/main/bucin/AciittAcaaDua" class="btn" target="_blank">Explore 🌙</a>
+            </div>
+
+            <div class="card" onclick="window.open('https://github.com/Chi5hira/portfolio/tree/main/bucin/AciittAcaaPlayHiji', '_blank')">
+                <i class="fas fa-star icon"></i>
+                <h2>AciittAcaaPlayHiji</h2>
+                <p>Mainkan melodi cinta dalam repository ini. Biarkan bintang-bintang menuntun jalanmu.</p>
+                <a href="https://github.com/Chi5hira/portfolio/tree/main/bucin/AciittAcaaPlayHiji" class="btn" target="_blank">Explore ⭐</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>Dibuat dengan cinta di malam hari 💖</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create floating hearts animation
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '-20px';
+            heart.style.opacity = '0.6';
+            heart.style.animation = `float ${Math.random() * 3 + 2}s linear`;
+            heart.style.zIndex = '-1';
+
+            document.querySelector('.floating-hearts').appendChild(heart);
+
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
+        }
+
+        // Add floating hearts animation
+        setInterval(createHeart, 300);
+
+        // Add keyframe animation for floating hearts
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 0.6;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add fade-in animation for cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
